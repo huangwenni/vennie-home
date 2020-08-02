@@ -1,0 +1,239 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+html{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.2rem;
+    background-color: #f1f1f1;
+    min-height: 101%;
+}
+body{
+    background:url("../imgs/bg.jpg") no-repeat fixed;
+    background-size: cover;
+}
+a{
+    color: #999;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.f-l{
+    float:left;
+}
+.f-r{
+    float:right;
+}
+.hidden{
+    display: none;
+}
+.content-size-1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+.content-size-2{
+    width: 66.66666666%;
+    float: left;
+}
+.content-size-3{
+    width: 33.33333333%;
+    float: left;
+}
+.card-shadow{
+    box-shadow: 0 0 8px black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card-shadow:hover{
+    animation: shadow 0.5s linear;
+    animation-fill-mode: forwards;
+}
+.article-tags {
+    font-weight: bold;
+    span {
+      border-radius: 0.2143rem;
+    }
+}
+.list-hover:hover {
+    background-color: rgba(230, 238, 232, 0.6);
+    animation: listShadow 0.3s linear;
+    animation-fill-mode: forwards;
+    a:hover {
+      color: #b63225;
+    }
+}
+.d-block{
+    display: block;
+}
+@keyframes listShadow {
+    0% {
+      box-shadow: 0;
+    }
+    100% {
+      box-shadow: 0 0 20px 2px black;
+    }
+  }
+@keyframes shadow{
+    0%{
+        box-shadow: 0 0 8px black;
+    }
+    100%{
+        box-shadow: 0 0 30px 2px black;
+    }
+}
+@media only screen and (min-width:768px){
+    .fixed{
+        position: fixed;
+        z-index: 999;
+    }
+}
+@media only screen and (max-width:768px){
+    html{
+        font-size: 12px;
+    }
+    .content-size-4{
+        width: 100%;
+        float: none;
+    }
+}
+@media only screen and (max-width:375px){
+    html{
+        font-size: 10px;
+    }
+}
+
+//colors
+$colors:(
+    "primary":#53534c,
+    "red":#b63225,
+    "black":#000,
+    "dark":#222,
+    "pink":#f8a8ca,
+    "t-black":rgba(10, 10, 0, 0.7),
+    "darkGray":#3d4450,
+    "white":white,
+    "light-blue":#f2f6f3,
+    "title-bg":#c1433ea8,
+    "card-bg1":rgba(230,238,232,0.5),
+    "card-bg2":rgba(230,238,232,0.6),
+);
+
+@each $colorKey,$color in $colors {
+    .color-#{$colorKey}{
+        color:$color;
+    }
+    .bgc-#{$colorKey}{
+        background-color:$color;
+    }
+}
+
+//text-align
+@each $var in (left,center,right) {
+    .text-#{$var}{
+        text-align: $var;
+    }
+}
+
+//font size 
+$font-sizes:(
+    xs:0.7143rem,
+    sm:0.8571rem,
+    md:1rem,
+    lg:1.1429rem,
+    xl:1.2857rem,
+    xxl:1.7143rem,
+);
+
+@each $sizeKey,$size in $font-sizes{
+    .fs-#{$sizeKey}{
+        font-size: $size;
+    }
+}
+
+//flex
+.d-flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-1{
+    flex:1
+}
+
+$flex-jc:(
+    start:flex-start,
+    center:center,
+    end:flex-end,
+    around:space-around,
+    between:space-between,
+);
+$flex-ai:(
+    start:flex-start,
+    center:center,
+    end:flex-end,
+    stretch:stretch,
+);
+
+
+@each $jcKey,$jc in $flex-jc {
+    .jc-#{$jcKey}{
+        justify-content: $jc;
+    }
+}
+@each $aiKey,$ai in $flex-ai{
+    .ai-#{$aiKey}{
+        align-items: $ai;
+    }
+}
+
+//spacing 
+$spacing-types:(
+    m:margin,
+    p:padding,
+);
+$spacing-directions:(
+    t:top,
+    r:right,
+    b:bottom,
+    l:left,
+);
+$spacing-sizes:(
+    0:0,
+    1:0.1429rem,
+    2:0.2857rem,
+    3:0.5714rem,
+    4:1.1429rem,
+    5:2.2857rem
+);
+
+//0~5 mt-1 pt-1...
+@each $stKey,$st in $spacing-types {
+    @each $sdKey,$sd in $spacing-directions {
+        @each $ssKey,$ss in $spacing-sizes {
+            .#{$stKey}#{$sdKey}-#{$ssKey}{
+                #{$st}-#{$sd}:$ss;
+            }
+        }
+    }
+}
+
+//0~5 mx-1 px-1...
+@each $stKey,$st in $spacing-types {
+    @each $ssKey,$ss in $spacing-sizes{
+        .#{$stKey}x-#{$ssKey}{
+            #{$st}-left:$ss;
+            #{$st}-right:$ss;
+        }
+        .#{$stKey}y-#{$ssKey}{
+            #{$st}-top:$ss;
+            #{$st}-bottom:$ss;
+        }
+
+    }
+}
