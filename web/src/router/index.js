@@ -17,7 +17,7 @@ const routes = [
       { path: '/', component: Index },
       { path: '/category', component: Category },
       { path: '/about', component: About },
-      { path: '/detail/:id', component: Detail,props:true },
+      { path: '/detail/:id', component: Detail, props: true },
     ]
   }
 ]
@@ -25,5 +25,15 @@ const routes = [
 const router = new VueRouter({
   routes
 })
+router.beforeEach((to, from, next) => {
+  // chrome
+  document.body.scrollTop = 0
+  // firefox
+  document.documentElement.scrollTop = 0
+  // safari
+  window.pageYOffset = 0
+  next()
+})
+
 
 export default router

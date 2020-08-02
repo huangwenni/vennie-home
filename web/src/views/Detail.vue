@@ -10,7 +10,7 @@
           :key="item._id"
         >{{item.name}}</span>
       </div>
-      <section class="text-left color-darkGray" v-html="model.body"></section>
+      <section class="text-left color-darkGray detail-box" v-html="model.body"></section>
     </MainPanel>
   </div>
 </template>
@@ -20,34 +20,39 @@ import MainPanel from "../components/Panel/MainPanel/MainPanel";
 
 export default {
   props: {
-    id: {}
+    id: {},
   },
   data() {
     return {
-      model: {}
+      model: {},
     };
   },
-  watch:{
-    '$route':'fetch'
+  watch: {
+    $route: "fetch",
   },
   components: {
-    MainPanel
+    MainPanel,
   },
   methods: {
     async fetch() {
       const res = await this.$http.get(`/articles/${this.id}`);
       this.model = res.data;
-    }
+    },
   },
   created() {
-    console.log(this.id)
+    console.log(this.id);
     this.fetch();
-  }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .article-title {
-  line-height: 30px;
+  line-height: 2.1429rem;
+}
+.detail-box {
+  word-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.5rem;
 }
 </style>

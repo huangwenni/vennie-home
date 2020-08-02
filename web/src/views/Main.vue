@@ -17,7 +17,7 @@
             </li>
           </ul>
           <!-- 移动端 <768px -->
-          <i class="f-r hidden" @click="showMenu">OOO</i>
+          <i class="f-r hidden" @click="showMenu"><img id="list_icon" src="../assets/imgs/list.png"></i>
         </div>
       </div>
     </div>
@@ -41,6 +41,14 @@
 </template>
 
 <style>
+#list_icon{
+  height: 2.1429rem;
+  position: absolute;
+  top: 50%;
+  right: 0rem;
+  transform:translateY(-50%);
+  cursor: pointer;
+}
 #nav{
   height: 3.5714rem;;
 }
@@ -64,6 +72,7 @@ a {
 .topBar-inner {
   height: 100%;
   line-height: 3.5714rem;
+  position: relative;
 }
 #pc-topBar-menu {
   display: inline-block;
@@ -73,7 +82,7 @@ a {
   width: 80%;
   margin: 0 auto;
 }
-@media only screen and (max-width: 54.8571rem) {
+@media only screen and (max-width: 768px) {
   .content-size-1 {
     width: 95%;
   }
@@ -99,7 +108,17 @@ a {
       height: 0rem;
     }
     100% {
-      height: 12.1429rem;
+      height: 10rem;
+    }
+  }
+}
+@media only screen and (max-width: 375px){
+  @keyframes showMenu {
+    0% {
+      height: 0rem;
+    }
+    100% {
+      height: 9rem;
     }
   }
 }

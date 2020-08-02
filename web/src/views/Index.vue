@@ -54,7 +54,7 @@ export default {
         page: 1,
         total: 0,
       },
-      isShow:false
+      isShow: false,
     };
   },
   methods: {
@@ -76,12 +76,18 @@ export default {
       //默认获取和显示第一页的数据
       await this.count(5, 1);
       //获取分页总数
-      await this.total(5,items);
-      this.isShow = true
+      await this.total(5, items);
+      this.isShow = true;
     },
     async next(page) {
       //获取和显示指定页面的数据
       this.count(5, page);
+      // chrome
+      document.body.scrollTop = 0;
+      // firefox
+      document.documentElement.scrollTop = 0;
+      // safari
+      window.pageYOffset = 0;
     },
     //判断一共分为几页 count：一页多少 items:所有的数据
     async total(count, items) {
@@ -122,6 +128,7 @@ export default {
         display: inline-block;
         font-weight: 100;
         border-radius: 0.7143rem;
+        line-height: 1.5rem;
       }
     }
     .article-content {

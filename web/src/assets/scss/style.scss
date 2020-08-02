@@ -5,14 +5,11 @@
 }
 html{
     width: 100%;
-    height: 100%;
-    font-size: 14px;
+    font-size: 1rem;
     font-family:Arial, Helvetica, sans-serif;
-    line-height: 1.2rem;
+    line-height: 16.8px;
     background-color: #f1f1f1;
     min-height: 101%;
-}
-body{
     background:url("../imgs/bg.jpg") no-repeat fixed;
     background-size: cover;
 }
@@ -45,8 +42,8 @@ ul{
     float: left;
 }
 .card-shadow{
-    box-shadow: 0 0 8px black;
-    border-radius: 5px;
+    box-shadow: 0 0 0.5714rem black;
+    border-radius: 0.3571rem;
     cursor: pointer;
 }
 .card-shadow:hover{
@@ -56,7 +53,7 @@ ul{
 .article-tags {
     font-weight: bold;
     span {
-      border-radius: 0.2143rem;
+      border-radius: 3.0002px;
     }
 }
 .list-hover:hover {
@@ -70,20 +67,23 @@ ul{
 .d-block{
     display: block;
 }
+[v-cloak]{
+    display: none;
+}
 @keyframes listShadow {
     0% {
       box-shadow: 0;
     }
     100% {
-      box-shadow: 0 0 20px 2px black;
+      box-shadow: 0 0 1.4286rem 0.1429rem black;
     }
   }
 @keyframes shadow{
     0%{
-        box-shadow: 0 0 8px black;
+        box-shadow: 0 0 0.5714rem black;
     }
     100%{
-        box-shadow: 0 0 30px 2px black;
+        box-shadow: 0 0 2.1429rem 0.1429rem black;
     }
 }
 @media only screen and (min-width:768px){
@@ -94,16 +94,18 @@ ul{
 }
 @media only screen and (max-width:768px){
     html{
-        font-size: 12px;
+        font-size: 16px !important;
+        background:url("../imgs/bg_mb.jpg") no-repeat fixed;
+        background-size: cover;
+        .panel-title{
+            span{
+                font-size: 16px !important;
+            }
+        }
     }
     .content-size-4{
         width: 100%;
         float: none;
-    }
-}
-@media only screen and (max-width:375px){
-    html{
-        font-size: 10px;
     }
 }
 
@@ -141,12 +143,12 @@ $colors:(
 
 //font size 
 $font-sizes:(
-    xs:0.7143rem,
-    sm:0.8571rem,
-    md:1rem,
-    lg:1.1429rem,
-    xl:1.2857rem,
-    xxl:1.7143rem,
+    xs:10.0002px,
+    sm:11.9994px,
+    md:14px,
+    lg:16.0006px,
+    xl:17.9998px,
+    xxl:24.0002px,
 );
 
 @each $sizeKey,$size in $font-sizes{
@@ -205,11 +207,11 @@ $spacing-directions:(
 );
 $spacing-sizes:(
     0:0,
-    1:0.1429rem,
-    2:0.2857rem,
-    3:0.5714rem,
-    4:1.1429rem,
-    5:2.2857rem
+    1:2.0006px,
+    2:3.9998px,
+    3:7.9996px,
+    4:16.0006px,
+    5:31.9998px
 );
 
 //0~5 mt-1 pt-1...

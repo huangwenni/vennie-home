@@ -16,7 +16,9 @@
           </span>
         </li>
       </ListPanel>
-      <MultiListPanel></MultiListPanel>
+      <div v-show="isShow">
+        <MultiListPanel></MultiListPanel>
+      </div>
     </aside>
   </div>
 </template>
@@ -35,12 +37,14 @@ export default {
   data() {
     return {
       items: [],
+      isShow:false
     };
   },
   methods: {
     async fetch() {
       const res = await this.$http.get("/articles");
       this.items = res.data.slice(0, 10);
+      this.isShow = true;
     },
   },
   created() {

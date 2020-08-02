@@ -91,7 +91,7 @@ export default {
 
 <style lang="scss" scoped>
 .category-radius {
-  border-radius: 5px;
+  border-radius: 0.3571rem;
 }
 .category-list {
   li {

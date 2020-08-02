@@ -63,9 +63,9 @@ export default {
 <style lang="scss">
 .ml-panel-title {
   overflow: hidden;
-  border-bottom: 1px solid white;
+  border-bottom: 0.0714rem solid white;
   li {
-    border-radius: 5px;
+    border-radius: 0.3571rem;
   }
   li:hover {
     background-color: #d9534f;

@@ -24,7 +24,6 @@ export default {
     width: 8.5714rem;
     height: 8.5714rem;
     border-radius: 4.2857rem;
-    background-color: pink;
   }
 }
 </style>
