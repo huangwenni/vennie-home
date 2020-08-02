@@ -1,7 +1,7 @@
 <template>
   <Panel>
-    <div slot="title" class="panel-title bgc-t-black color-white px-4 py-3">
-      <span class="fs-md">{{title}}</span>
+    <div slot="title" class="panel-title bgc-t-black color-white px-4 py-4">
+      <span class="fs-lg">{{title}}</span>
     </div>
     <div slot="content">
       <ul>

@@ -12,7 +12,7 @@
           @click="$router.push(`/detail/${item._id}`)"
         >
           <span>
-            <a class="color-darkGray">{{item.title}}</a>
+            <a class="color-darkGray fs-md">{{item.title}}</a>
           </span>
         </li>
       </ListPanel>

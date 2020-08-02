@@ -1,6 +1,6 @@
 <template>
   <Panel>
-    <div slot="title" class="panel-title bgc-t-black color-white px-4 py-3">
+    <div slot="title" class="panel-title bgc-t-black color-white px-4 py-4">
       <span class="fs-lg">"Vennie"</span>
     </div>
     <div slot="content" class="px-4 py-4 user-avater">

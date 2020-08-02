@@ -7,7 +7,7 @@ html{
     width: 100%;
     font-size: 1rem;
     font-family:Arial, Helvetica, sans-serif;
-    line-height: 16.8px;
+    line-height: 1.2rem;
     background-color: #f1f1f1;
     min-height: 101%;
     background:url("../imgs/bg.jpg") no-repeat fixed;
@@ -53,7 +53,7 @@ ul{
 .article-tags {
     font-weight: bold;
     span {
-      border-radius: 3.0002px;
+      border-radius: 0.2143rem;
     }
 }
 .list-hover:hover {
@@ -94,12 +94,12 @@ ul{
 }
 @media only screen and (max-width:768px){
     html{
-        font-size: 16px !important;
+        font-size: 1.1429rem !important;
         background:url("../imgs/bg_mb.jpg") no-repeat fixed;
         background-size: cover;
         .panel-title{
             span{
-                font-size: 16px !important;
+                font-size: 1.1429rem !important;
             }
         }
     }
@@ -141,14 +141,14 @@ $colors:(
     }
 }
 
-//font size 
+//font size 10 12 14 16 18 24
 $font-sizes:(
-    xs:10.0002px,
-    sm:11.9994px,
-    md:14px,
-    lg:16.0006px,
-    xl:17.9998px,
-    xxl:24.0002px,
+    xs:0.7143rem,
+    sm:0.8571rem,
+    md:1rem,
+    lg:1.1429rem,
+    xl:1.2857rem,
+    xxl:1.7143rem,
 );
 
 @each $sizeKey,$size in $font-sizes{
@@ -205,6 +205,7 @@ $spacing-directions:(
     b:bottom,
     l:left,
 );
+//0 2 4 8 16 32
 $spacing-sizes:(
     0:0,
     1:2.0006px,

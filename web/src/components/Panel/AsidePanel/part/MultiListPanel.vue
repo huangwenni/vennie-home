@@ -1,10 +1,10 @@
 <template>
   <Panel>
-    <div slot="title" class="px-4 py-3">
+    <div slot="title" class="px-4 py-4">
       <ul class="ml-panel-title pb-3 color-darkGray">
         <li
           v-for="(item,index) in ['链接收藏','个人链接']"
-          class="f-l px-4 py-3 mr-3"
+          class="f-l px-4 py-4 mr-3"
           :class="{active:index==isActive}"
           :key="index"
           @click="changeIndex(index)"
