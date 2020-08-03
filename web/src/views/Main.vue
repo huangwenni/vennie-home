@@ -4,15 +4,15 @@
       <div class="topBar bgc-t-black fixed">
         <div class="topBar-inner content-size-1 color-white">
           <!-- pc端 >768px -->
-          <h1 class="mr-5" id="logo">Vennie</h1>
+          <h1 class="mr-6" id="logo">Vennie</h1>
           <ul id="pc-topBar-menu">
-            <li class="px-5 f-l">
+            <li class="px-6 f-l">
               <router-link to="/">首页</router-link>
             </li>
-            <li class="px-5 f-l">
+            <li class="px-6 f-l">
               <router-link to="/category">分类</router-link>
             </li>
-            <li class="px-5 f-l">
+            <li class="px-6 f-l">
               <router-link to="/about">关于我</router-link>
             </li>
           </ul>
@@ -108,17 +108,7 @@ a {
       height: 0rem;
     }
     100% {
-      height: 10rem;
-    }
-  }
-}
-@media only screen and (max-width: 375px){
-  @keyframes showMenu {
-    0% {
-      height: 0rem;
-    }
-    100% {
-      height: 9rem;
+      height: 11rem;
     }
   }
 }

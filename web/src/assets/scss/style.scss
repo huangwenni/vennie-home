@@ -67,6 +67,11 @@ ul{
 .d-block{
     display: block;
 }
+.overflow-warp {
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 1.5rem;
+}
 [v-cloak]{
     display: none;
 }
@@ -84,28 +89,6 @@ ul{
     }
     100%{
         box-shadow: 0 0 2.1429rem 0.1429rem black;
-    }
-}
-@media only screen and (min-width:768px){
-    .fixed{
-        position: fixed;
-        z-index: 999;
-    }
-}
-@media only screen and (max-width:768px){
-    html{
-        font-size: 1.1429rem !important;
-        background:url("../imgs/bg_mb.jpg") no-repeat fixed;
-        background-size: cover;
-        .panel-title{
-            span{
-                font-size: 1.1429rem !important;
-            }
-        }
-    }
-    .content-size-4{
-        width: 100%;
-        float: none;
     }
 }
 
@@ -205,14 +188,15 @@ $spacing-directions:(
     b:bottom,
     l:left,
 );
-//0 2 4 8 16 32
+//0 2 4 8 16 20 32
 $spacing-sizes:(
     0:0,
     1:2.0006px,
     2:3.9998px,
     3:7.9996px,
     4:16.0006px,
-    5:31.9998px
+    5:20px,
+    6:32px,
 );
 
 //0~5 mt-1 pt-1...
@@ -238,5 +222,35 @@ $spacing-sizes:(
             #{$st}-bottom:$ss;
         }
 
+    }
+}
+
+@media only screen and (min-width:768px){
+    .fixed{
+        position: fixed;
+        z-index: 999;
+    }
+}
+@media only screen and (max-width:768px){
+    html{
+        font-size: 0.8571rem !important;
+        background:url("../imgs/bg_mb.jpg") no-repeat fixed;
+        background-size: cover;
+        .panel-title{
+            span{
+                font-size: 1.1429rem !important;
+            }
+        }
+    }
+    .content-size-4{
+        width: 100%;
+        float: none;
+    }
+    .line-style{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .category-color{
+        color: #275880;
     }
 }

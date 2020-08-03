@@ -1,14 +1,14 @@
 <template>
   <div>
     <MainPanel>
-      <div class="fs-xxl color-darkGray pt-3 pb-5">分类</div>
+      <div class="fs-xxl color-darkGray pt-3 pb-6">分类</div>
       <section class="text-left">
         <div v-show="front" v-cloak>
           <h3 class="color-darkGray py-4">前端</h3>
           <div class="bgc-card-bg2 category-radius px-3 py-3">
             <ul class="category-list">
-              <li class="py-2" v-for="item in front" :key="item._id">
-                <a class="color-black" @click="$router.push(`/detail/${item._id}`)">{{item.title}}</a>
+              <li class="py-2 line-style" v-for="item in front" :key="item._id">
+                <a class="color-black category-color" @click="$router.push(`/detail/${item._id}`)">{{item.title}}</a>
               </li>
             </ul>
           </div>
@@ -17,8 +17,8 @@
           <h3 class="color-darkGray py-4">后端</h3>
           <div class="bgc-card-bg2 category-radius px-3 py-3">
             <ul class="category-list">
-              <li class="py-2" v-for="item in back" :key="item._id">
-                <a class="color-black" @click="$router.push(`/detail/${item._id}`)">{{item.title}}</a>
+              <li class="py-2 line-style" v-for="item in back" :key="item._id">
+                <a class="color-black category-color" @click="$router.push(`/detail/${item._id}`)">{{item.title}}</a>
               </li>
             </ul>
           </div>
@@ -27,8 +27,8 @@
           <h3 class="color-darkGray py-4">数据库</h3>
           <div class="bgc-card-bg2 category-radius px-3 py-3">
             <ul class="category-list">
-              <li class="py-2" v-for="item in dataBase" :key="item._id">
-                <a class="color-black" @click="$router.push(`/detail/${item._id}`)">{{item.title}}</a>
+              <li class="py-2 line-style" v-for="item in dataBase" :key="item._id">
+                <a class="color-black category-color" @click="$router.push(`/detail/${item._id}`)">{{item.title}}</a>
               </li>
             </ul>
           </div>
@@ -38,7 +38,7 @@
           <div class="bgc-card-bg2 category-radius px-3 py-3">
             <ul class="category-list">
               <li class="py-2" v-for="item in tools" :key="item._id">
-                <a class="color-black" @click="$router.push(`/detail/${item._id}`)">{{item.title}}</a>
+                <a class="color-black category-color" @click="$router.push(`/detail/${item._id}`)">{{item.title}}</a>
               </li>
             </ul>
           </div>

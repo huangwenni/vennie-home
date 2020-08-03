@@ -10,7 +10,7 @@
           :key="item._id"
         >{{item.name}}</span>
       </div>
-      <section class="text-left color-darkGray detail-box" v-html="model.body"></section>
+      <section class="text-left color-darkGray overflow-warp" v-html="model.body"></section>
     </MainPanel>
   </div>
 </template>
@@ -49,10 +49,5 @@ export default {
 <style lang="scss" scoped>
 .article-title {
   line-height: 2.1429rem;
-}
-.detail-box {
-  word-wrap: break-word;
-  word-break: break-all;
-  line-height: 1.5rem;
 }
 </style>

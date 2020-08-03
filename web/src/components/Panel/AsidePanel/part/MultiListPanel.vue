@@ -14,12 +14,12 @@
     <div slot="content">
       <ul v-show="isActive==0" v-cloak>
         <li class="list-hover" v-for="(item,index) in colData" :key="index">
-            <a class="color-darkGray d-block py-3 px-4" target="blank" :href="item.link">{{item.name}}</a>
+            <a class="color-darkGray d-block py-3 px-4 line-style" target="blank" :href="item.link">{{item.name}}</a>
         </li>
       </ul>
       <ul v-show="isActive==1" v-cloak>
         <li class="list-hover"  v-for="(item,index) in perData" :key="index">
-            <a class="color-darkGray d-block py-3 px-4" target="blank" :href="item.link">{{item.name}}</a>
+            <a class="color-darkGray d-block py-3 px-4 line-style" target="blank" :href="item.link">{{item.name}}</a>
         </li>
       </ul>
     </div>

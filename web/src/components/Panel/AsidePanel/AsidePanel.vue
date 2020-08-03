@@ -6,7 +6,7 @@
       </div>
       <ListPanel title="近期文章">
         <li
-          class="py-3 px-4 list-hover"
+          class="py-3 px-4 list-hover line-style"
           v-for="item in items"
           :key="item._id"
           @click="$router.push(`/detail/${item._id}`)"
