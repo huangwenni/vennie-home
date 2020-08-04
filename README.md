@@ -6,7 +6,7 @@
 
 http://vennie.huangwenni.club/
 
-后台管理（登陆账号Vennie，密码123456）：
+后台管理（登陆账号Vennie，密码123456），目前只适配PC端：
 
 http://vennie.huangwenni.club/admin
 
