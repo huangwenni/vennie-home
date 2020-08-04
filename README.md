@@ -16,4 +16,4 @@ http://vennie.huangwenni.club/admin
 
 后端：Nodejs | Mongodb
 
-服务器：Ubuntu
+服务器：阿里云Ubuntu
