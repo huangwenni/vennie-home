@@ -1,6 +1,6 @@
 # vennie-home我的个人博客
 
-自己搭建的个人博客，包括前端web网页和一个后台管理系统。项目上传至阿里云服务器，访问地址：
+自己搭建的个人博客，包括前端响应式web网页和一个后台管理系统。项目上传至阿里云服务器，访问地址：
 
 前端web：
 
@@ -14,6 +14,6 @@ http://vennie.huangwenni.club/admin
 
 前端：HTML|CSS|SCSS|JS|VUE|ElementUI|Vuetify
 
-后端：Nodejs|M
+后端：Nodejs | Mongodb
 
 服务器：Ubuntu
