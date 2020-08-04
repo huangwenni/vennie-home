@@ -4,7 +4,7 @@ import router from './router/index'
 
 const http = axios.create({
     //vue-cli才有process这个环境变量
-    baseURL:process.env.VUE_APP_API_URL ||'admin/api',
+    baseURL:process.env.VUE_APP_API_URL ||'/admin/api',
 })
 
 //响应拦截
