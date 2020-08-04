@@ -62,11 +62,10 @@ export default {
       //对获取到的文章数据进行处理
       const res = await this.$http.get("/articles");
       const items = res.data.map((item) => {
-        const text = item.body;
-        const text1 = text.replace(/<\/?.+?>/g, "");
-        const text2 = text1.replace(/ /g, "");
-        const text3 = text2.replace(/[ ]|[&nbsp;]/g, "");
-        item.body = text3;
+        let text = item.body;
+        text = text.replace(/<[^>]+>/g,"");
+        text = text.replace(/&nbsp;/ig, "");
+        item.body = text;
         return item;
       });
       return items;
