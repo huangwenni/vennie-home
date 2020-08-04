@@ -14,6 +14,6 @@ http://vennie.huangwenni.club/admin
 
 前端：HTML|CSS|JS|VUE|ElementUI|Vuetify|SCSS
 
-后端：Nodejs
+后端：Nodejs|M
 
 服务器：Ubuntu
