@@ -12,7 +12,7 @@ http://vennie.huangwenni.club/admin
 
 技术栈：
 
-前端：HTML|CSS|JS|VUE|ElementUI|Vuetify|SCSS
+前端：HTML|CSS|SCSS|JS|VUE|ElementUI|Vuetify
 
 后端：Nodejs|M
 
