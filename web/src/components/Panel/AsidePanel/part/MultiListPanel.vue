@@ -13,12 +13,12 @@
     </div>
     <div slot="content">
       <ul v-show="isActive==0" v-cloak>
-        <li class="list-hover" v-for="(item,index) in colData" :key="index">
+        <li class="list-hover" v-for="item in colData" :key="item._id">
             <a class="color-darkGray d-block py-3 px-4 line-style" target="blank" :href="item.link">{{item.name}}</a>
         </li>
       </ul>
       <ul v-show="isActive==1" v-cloak>
-        <li class="list-hover"  v-for="(item,index) in perData" :key="index">
+        <li class="list-hover"  v-for="item in perData" :key="item._id">
             <a class="color-darkGray d-block py-3 px-4 line-style" target="blank" :href="item.link">{{item.name}}</a>
         </li>
       </ul>

@@ -3,8 +3,8 @@
     <div class="content-size-2 content-size-4 px-4 py-4 text-center">
       <section
         class="bgc-card-bg1 px-4 py-4 mb-4 card-shadow article-list"
-        v-for="(item,index) in items"
-        :key="index"
+        v-for="item in items"
+        :key="item._id"
       >
         <a @click="$router.push(`/detail/${item._id}`)">
           <div class="article-title">
@@ -14,8 +14,8 @@
           <div class="article-tags pb-4 color-white fs-xs">
             <span
               class="bgc-t-black px-2 py-2 mr-2"
-              v-for="(category,index) in item.categorySon"
-              :key="index"
+              v-for="category in item.categorySon"
+              :key="category._id"
             >{{category.name}}</span>
           </div>
           <div class="article-content text-left card-shadow bgc-card-bg2 px-3 py-2">
