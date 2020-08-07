@@ -17,3 +17,9 @@ http://vennie.huangwenni.club/admin
 后端：Nodejs | Mongodb
 
 服务器：阿里云Ubuntu
+
+目录结构：
+
+前端：web
+后端：server
+后台管理系统：admin
