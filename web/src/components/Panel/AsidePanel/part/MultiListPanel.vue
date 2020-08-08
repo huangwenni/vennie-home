@@ -6,7 +6,7 @@
           v-for="(item,index) in ['链接收藏','个人链接']"
           class="f-l px-4 py-4 mr-3"
           :class="{active:index==isActive}"
-          :key="index"
+          :key="item"
           @click="changeIndex(index)"
         >{{item}}</li>
       </ul>
